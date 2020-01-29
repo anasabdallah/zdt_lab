@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    traefik:
+        image: traefik:v1.7.16
+        networks:
+            - webgateway
+        ports:
+            - "80:80"
+            - "8080:8080"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ./traefik.toml:/traefik.toml
+
+networks:
+    webgateway:
+        driver: bridge
+
+# docker-compose --project-name=traefik -f docker-compose.traefik.yml up -d
