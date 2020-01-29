@@ -8,8 +8,11 @@ else
     OLD="green"
 fi
 
+echo "Pulling the latest version .."
+docker pull anasabdullah/zdt-app
+
 echo "Starting "$ENV" container"
-docker-compose build && docker-compose --project-name=$ENV up --force-recreate
+docker-compose --project-name=$ENV up --force-recreate
 
 echo "Waiting..."
 sleep 5s
