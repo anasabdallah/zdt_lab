@@ -5,7 +5,7 @@ pipeline {
             steps {
 			    script {
 				    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-      			        def app = docker.build("anasabdullah/zdt-app", '.').push()
+      			        def app = docker.build("anasabdullah/zdt-app:latest", '.').push()
     			    }
 			    }
             }

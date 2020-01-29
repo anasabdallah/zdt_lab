@@ -2,7 +2,7 @@ version: '3'
 
 services:
     app:
-        image: anasabdullah/zdt-app
+        image: "anasabdullah/zdt-app:latest"
         labels:
             - "traefik.enable=true"
             - "traefik.backend=flask_app"
