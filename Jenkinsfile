@@ -23,7 +23,7 @@ pipeline {
 	    stage('deploy') {
 		    steps {
                 sshagent(credentials : ['hostkey']) {
-                    sh 'ssh -o StrictHostKeyChecking=no anas@10.142.0.21 ls'
+                    sh 'ssh anas@10.142.0.21 ls'
                 }
 		    }
 	    }
