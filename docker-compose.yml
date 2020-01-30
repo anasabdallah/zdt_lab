@@ -5,10 +5,10 @@ services:
         image: "anasabdullah/zdt-app:latest"
         labels:
             - "traefik.enable=true"
-            - "traefik.backend=flask_app"
-            # - "traefik.backend.healthcheck.path=/"
-            # - "traefik.backend.healthcheck.interval=1s"
-            - "traefik.frontend.rule=Host:localhost"
+            - "traefik.backend=node_app"
+            - "traefik.backend.healthcheck.path=/"
+            - "traefik.backend.healthcheck.interval=1m"
+            - "traefik.frontend.rule=Host:0.0.0.0"
             - "traefik.port=3000"
         networks:
             - traefik
