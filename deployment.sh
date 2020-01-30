@@ -12,10 +12,10 @@ echo "Pulling the latest version .."
 docker pull anasabdullah/zdt-app:latest
 
 echo "Starting "$ENV" container"
-/usr/local/bin/docker-compose --project-name=$ENV up --force-recreate
+docker-compose --project-name=$ENV up --force-recreate
 
 echo "Waiting..."
 sleep 5s
 
 echo "Stopping "$OLD" container"
-/usr/local/bin/docker-compose --project-name=$OLD down
+docker-compose --project-name=$OLD down
