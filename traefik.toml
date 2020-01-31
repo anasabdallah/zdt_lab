@@ -12,7 +12,7 @@ address = ":8080"
 attempts = 3
 maxMem = 3
 
-[accessLog]
+[log]
   filePath = "/home/anas/access.log"
   format = "json"
 
