@@ -2,11 +2,11 @@ defaultEntryPoints = ["http"]
 logLevel = "DEBUG"
 
 [api]
-address = ":8081"
+address = ":8080"
 
 [entryPoints]
     [entryPoints.http]
-    address = ":8080"
+    address = ":8000"
 
 [retry]
 attempts = 3
