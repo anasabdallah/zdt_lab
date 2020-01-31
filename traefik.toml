@@ -13,7 +13,7 @@ attempts = 3
 maxMem = 3
 
 [log]
-  filePath = "/home/anas/access.log"
+  filePath = "/home/anas/logs/access.log"
   format = "json"
 
 [docker]
