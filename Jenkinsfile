@@ -13,7 +13,7 @@ pipeline {
 	    stage('deploy') {
 		    steps {
                 sshagent(credentials : ['hostkey']) {
-                    sh 'ssh -o StrictHostKeyChecking=no anas@10.142.0.21 "cd /home/anas/app/zdt_lab && ./deploy.sh"'
+                    sh 'ssh -o StrictHostKeyChecking=no anas@10.142.0.21 "cd /home/anas/app/zdt_lab && git pull origin master && ./deploy.sh"'
                 }
 		    }
 	    }

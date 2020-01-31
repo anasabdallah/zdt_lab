@@ -8,9 +8,6 @@ else
     OLD="green"
 fi
 
-echo "Pulling the latest configs .."
-git pull origin master
-
 echo "Pulling the latest version .."
 docker pull anasabdullah/zdt-app:latest
 
