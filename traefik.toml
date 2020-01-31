@@ -12,10 +12,6 @@ address = ":8080"
 attempts = 3
 maxMem = 3
 
-[log]
-  filePath = "/home/anas/logs/access.log"
-  format = "json"
-
 [docker]
 endpoint = "unix:///var/run/docker.sock"
 domain = "localhost"
